@@ -1,6 +1,6 @@
-import { FormItem } from '../types/FormItem';
-import { parseFormConfigToJSON } from '../utils/common';
-import FormElement from './FormElement';
+import { FormItem } from '../../types/FormItem';
+import { parseFormConfigToJSON } from '../../utils/common';
+import FormElement from '../FormElement/FormElement';
 
 type Props = {
 	formConfig: string;

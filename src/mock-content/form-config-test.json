@@ -1,0 +1,32 @@
+{
+	"items": [
+		{
+			"type": "number",
+			"label": "Count"
+		},
+		{
+			"type": "text",
+			"label": "Caption"
+		},
+		{
+			"type": "textarea",
+			"label": "Long text"
+		},
+		{
+			"type": "checkbox",
+			"label": "Is Editable"
+		},
+		{
+			"type": "date",
+			"label": "Date"
+		},
+		{
+			"type": "radio",
+			"label": "Radio"
+		}
+	],
+	"buttons": [
+		"Ok",
+		"Cancel"
+	]
+}
