@@ -7,7 +7,7 @@ type Props = {
 	formConfig: string;
 }
 
-//Renders form, based on provided form configuration
+/* Renders form, based on provided form configuration */
 export default function FormResult({formConfig}: Props) {
 	const parsedFormsConfig = parseFormConfigToJSON(formConfig);
 	const { items = [], buttons = [] } = parsedFormsConfig;

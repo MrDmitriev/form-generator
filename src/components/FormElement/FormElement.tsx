@@ -4,7 +4,7 @@ import { Checkbox, DateField, NumberField, RadioButton, TextArea, TextField } fr
 type Props = {
 	element: FormItem
 }
-// returns form field, which must be a one of permitted types
+/* returns form field, which must be a one of permitted types */
 export default function FormElement({ element }: Props) {
 	let formElement = <div>Unknown form element</div>
 	switch (element.type) {
