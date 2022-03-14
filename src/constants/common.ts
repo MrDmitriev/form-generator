@@ -1,0 +1,1 @@
+export const INVALID_FORM_CONFIGURATION_WARNING = 'You did not provide any valid form configuration';

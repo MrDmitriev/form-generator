@@ -1,3 +1,4 @@
+import { INVALID_FORM_CONFIGURATION_WARNING } from '../../constants/common';
 import { FormItem } from '../../types/FormItem';
 import { parseFormConfigToJSON } from '../../utils/common';
 import FormElement from '../FormElement/FormElement';
@@ -11,7 +12,7 @@ export default function FormResult({formConfig}: Props) {
 	const parsedFormsConfig = parseFormConfigToJSON(formConfig);
 	const { items = [], buttons = [] } = parsedFormsConfig;
 
-	const emptyFormConfigWarning = <div className="tabcontent">You did not provide any valid form configuration</div>
+	const invalidFormConfiguration = <div className="tabcontent">{INVALID_FORM_CONFIGURATION_WARNING}</div>
 	return parsedFormsConfig ? (
 		<div id="result" className="tabcontent active">
 			{items.map((element: FormItem) => <FormElement element={element} />)}
@@ -21,5 +22,5 @@ export default function FormResult({formConfig}: Props) {
 			</div>
 
 		</div>
-	) : emptyFormConfigWarning
+	) : invalidFormConfiguration
 }
