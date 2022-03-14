@@ -5,6 +5,8 @@ type Props = {
 	onConfigSubmit: () => void,
 	value: string
 }
+
+// Enables to enter a valid json with form configuration
 export default function FormConfig({onConfigChange, onConfigSubmit, value}: Props) {
 	return (
 		<div id="config" className="tabcontent active">

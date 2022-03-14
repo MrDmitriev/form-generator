@@ -6,11 +6,12 @@ type Props = {
 	formConfig: string;
 }
 
+//Renders form, based on provided form configuration
 export default function FormResult({formConfig}: Props) {
 	const parsedFormsConfig = parseFormConfigToJSON(formConfig);
 	const { items = [], buttons = [] } = parsedFormsConfig;
 
-	const emptyFormConfigWarning = <div className="tabcontent">You did not provide any form configuration</div>
+	const emptyFormConfigWarning = <div className="tabcontent">You did not provide any valid form configuration</div>
 	return parsedFormsConfig ? (
 		<div id="result" className="tabcontent active">
 			{items.map((element: FormItem) => <FormElement element={element} />)}
