@@ -39,7 +39,18 @@ const FormGenerator: React.FC = (): React.ReactElement => {
 	return (
 		<div className='form-generator'>
 			<div className="tab">
-				{TAB_LIST.map(tab => <Tab key={tab} tabName={tab} isActive={tab === activeTab} onTabClick={handleTabClick} /> )}
+
+				{TAB_LIST.map(
+					tab => {
+						return <Tab
+							key={tab}
+							tabName={tab}
+							isActive={tab === activeTab}
+							onTabClick={handleTabClick}
+						/> 
+					}
+				)}
+				
 			</div>
 
 			{activeTab === FORM_CONFIG_TAB

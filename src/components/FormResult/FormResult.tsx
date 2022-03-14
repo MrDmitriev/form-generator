@@ -13,16 +13,23 @@ const FormResult: React.FC<Props> = ({formConfig}) => {
 	const { items = [], buttons = [] } = parsedFormsConfig;
 
 	const invalidFormConfiguration = <div className="tabcontent">{INVALID_FORM_CONFIGURATION_WARNING}</div>
-	return parsedFormsConfig ? (
-		<div id="result" className="tabcontent active">
-			{items.map((element: FormItem) => <FormElement element={element} />)}
 
-			<div className='form-result__buttons'>
-				{buttons.map((button: React.ReactNode) => <button className='form-button'>{button}</button>)}
+	return parsedFormsConfig
+	? (
+			<div id="result" className="tabcontent active">
+				{items.map(
+					(element: FormItem) => <FormElement element={element} />
+				)}
+
+				<div className='form-result__buttons'>
+					{buttons.map(
+						(button: React.ReactNode) => <button className='form-button'>{button}</button>
+					)}
+				</div>
+
 			</div>
-
-		</div>
-	) : invalidFormConfiguration
+		)
+	: invalidFormConfiguration
 }
 
 export default FormResult;
