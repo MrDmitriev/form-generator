@@ -9,9 +9,18 @@ export default function FormConfig({onConfigChange, onConfigSubmit, value}: Prop
 	return (
 		<div id="config" className="tabcontent active">
 			<form className='form-configurator'>
-				<textarea className='form-configurator__input' value={value} onChange={onConfigChange} placeholder="{'items': [], 'buttons': []}" />
+				<textarea
+					className='form-configurator__input'
+					value={value}
+					onChange={onConfigChange}
+					placeholder="{'items': [], 'buttons': []}"
+				/>
 			</form>
-			<button className='form-configurator__submit' onClick={onConfigSubmit}>Apply</button>
+			<button
+				className='form-configurator__submit'
+				onClick={onConfigSubmit}
+			> Apply
+			</button>
 		</div>
 	)
 }

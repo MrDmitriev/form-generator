@@ -4,6 +4,6 @@ export const parseFormConfigToJSON = (config: string) => {
 		return parsed;
 	} catch (error) {
 		console.error("An error occured while parsing form config, #parseFormConfigToJSON", error);
-		return {};
+		return '';
 	}
 }

@@ -7,9 +7,11 @@ type Props = {
 }
 
 export default function FormResult({formConfig}: Props) {
-	const parsedFormsConfig = parseFormConfigToJSON(formConfig)	;
+	const parsedFormsConfig = parseFormConfigToJSON(formConfig);
 	const { items = [], buttons = [] } = parsedFormsConfig;
-	return (
+
+	const emptyFormConfigWarning = <div className="tabcontent">You did not provide any form configuration</div>
+	return parsedFormsConfig ? (
 		<div id="result" className="tabcontent active">
 			{items.map((element: FormItem) => <FormElement element={element} />)}
 
@@ -18,5 +20,5 @@ export default function FormResult({formConfig}: Props) {
 			</div>
 
 		</div>
-	)
+	) : emptyFormConfigWarning
 }

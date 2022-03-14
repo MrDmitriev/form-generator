@@ -1,4 +1,4 @@
-import { useState, MouseEvent, ChangeEvent } from "react"
+import { useState, MouseEvent, ChangeEvent, useCallback } from "react"
 import { FORM_CONFIG_TAB, FORM_RESULT_TAB, TAB_LIST } from "../../constants/tabs";
 import FormConfig from "../FormConfig/FormConfig";
 import FormResult from "../FormResult/FormResult";
@@ -8,10 +8,13 @@ export default function FormGenerator() {
 	const [activeTab, setActiveTab] = useState(FORM_CONFIG_TAB);
 	const [formConfig, setFormConfig] = useState('');
 
-	const handleTabClick = (e: MouseEvent<HTMLButtonElement>) => {
-		const tabName = e.currentTarget.id;
-		setActiveTab(tabName);
-	}
+	const handleTabClick = useCallback(
+		(e: MouseEvent<HTMLButtonElement>) => {
+			const tabName = e.currentTarget.id;
+			setActiveTab(tabName);
+		},
+		[]
+	)
 
 	const handleConfigChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
 		const value = e.currentTarget.value;
