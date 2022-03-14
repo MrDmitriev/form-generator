@@ -8,7 +8,7 @@ type Props = {
 }
 
 /* Renders form, based on provided form configuration */
-export default function FormResult({formConfig}: Props) {
+const FormResult: React.FC<Props> = ({formConfig}) => {
 	const parsedFormsConfig = parseFormConfigToJSON(formConfig);
 	const { items = [], buttons = [] } = parsedFormsConfig;
 
@@ -24,3 +24,5 @@ export default function FormResult({formConfig}: Props) {
 		</div>
 	) : invalidFormConfiguration
 }
+
+export default FormResult;

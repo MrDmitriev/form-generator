@@ -4,7 +4,7 @@ type Props = {
 	element: FormItem
 }
 
-export default function RadioButton({ element }: Props) {
+const RadioButton: React.FC<Props> = ({ element }) => {
 	const { label } = element;
 
 	return (
@@ -14,3 +14,5 @@ export default function RadioButton({ element }: Props) {
 		</div>
 	)
 }
+
+export default RadioButton;

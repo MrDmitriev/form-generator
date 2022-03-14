@@ -4,7 +4,7 @@ type Props = {
 	element: FormItem
 }
 
-export default function Checkbox({ element }: Props) {
+const Checkbox: React.FC<Props> = ({ element }) => {
 	const { label } = element;
 
 	return (
@@ -14,3 +14,5 @@ export default function Checkbox({ element }: Props) {
 		</div>
 	)
 }
+
+export default Checkbox;
