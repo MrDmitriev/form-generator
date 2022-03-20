@@ -4,7 +4,7 @@ type Props = {
 	element: FormItem
 }
 
-export default function NumberField({ element }: Props) {
+const NumberField: React.FC<Props> = ({ element }) => {
 	const { label } = element;
 	return (
 		<div className='form-element'>
@@ -13,3 +13,5 @@ export default function NumberField({ element }: Props) {
 		</div>
 	)
 }
+
+export default NumberField;

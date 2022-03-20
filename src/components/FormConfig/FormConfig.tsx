@@ -6,8 +6,8 @@ type Props = {
 	value: string
 }
 
-// Enables to enter a valid json with form configuration
-export default function FormConfig({onConfigChange, onConfigSubmit, value}: Props) {
+/* Enables to enter a valid json with form configuration */
+const FormConfig:React.FC<Props> = ({onConfigChange, onConfigSubmit, value}) => {
 	return (
 		<div id="config" className="tabcontent active">
 			<form className='form-configurator'>
@@ -26,3 +26,5 @@ export default function FormConfig({onConfigChange, onConfigSubmit, value}: Prop
 		</div>
 	)
 }
+
+export default FormConfig;

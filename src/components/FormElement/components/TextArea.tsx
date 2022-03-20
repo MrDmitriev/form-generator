@@ -4,7 +4,7 @@ type Props = {
 	element: FormItem
 }
 
-export default function TextArea({ element }: Props) {
+const TextArea: React.FC<Props> = ({ element }) => {
 	const { label } = element;
 	return (
 		<div className='form-element'>
@@ -13,3 +13,5 @@ export default function TextArea({ element }: Props) {
 		</div>
 	)
 }
+
+export default TextArea;

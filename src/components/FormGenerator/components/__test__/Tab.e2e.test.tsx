@@ -10,7 +10,7 @@ describe('Tab component', () => {
 		const onTabClick = jest.fn();
 
 		const props = {
-			tab: 'config',
+			tabName: 'config',
 			isActive: false,
 			onTabClick
 		};

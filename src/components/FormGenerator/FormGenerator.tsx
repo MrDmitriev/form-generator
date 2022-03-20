@@ -9,7 +9,7 @@ import Tab from "./components/Tab";
 	This component renders main skeleton: two tabs (config tab: where you can input form configuration
 	and result tab: where you can see a generated form) and tab content. 
 */
-export default function FormGenerator() {
+const FormGenerator: React.FC = (): React.ReactElement => {
 	const [activeTab, setActiveTab] = useState(FORM_CONFIG_TAB);
 	const [formConfig, setFormConfig] = useState('');
 
@@ -39,7 +39,18 @@ export default function FormGenerator() {
 	return (
 		<div className='form-generator'>
 			<div className="tab">
-				{TAB_LIST.map(tab => <Tab key={tab} tab={tab} isActive={tab === activeTab} onTabClick={handleTabClick} /> )}
+
+				{TAB_LIST.map(
+					tab => {
+						return <Tab
+							key={tab}
+							tabName={tab}
+							isActive={tab === activeTab}
+							onTabClick={handleTabClick}
+						/> 
+					}
+				)}
+				
 			</div>
 
 			{activeTab === FORM_CONFIG_TAB
@@ -54,3 +65,5 @@ export default function FormGenerator() {
 		</div>
 	)
 }
+
+export default FormGenerator;

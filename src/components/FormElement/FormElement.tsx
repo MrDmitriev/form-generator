@@ -4,8 +4,8 @@ import { Checkbox, DateField, NumberField, RadioButton, TextArea, TextField } fr
 type Props = {
 	element: FormItem
 }
-// returns form field, which must be a one of permitted types
-export default function FormElement({ element }: Props) {
+/* returns form field, which must be a one of permitted types */
+const FormElement: React.FC<Props> = ({ element }): React.ReactElement => {
 	let formElement = <div>Unknown form element</div>
 	switch (element.type) {
 		case 'number':
@@ -28,3 +28,5 @@ export default function FormElement({ element }: Props) {
 	}
 	return formElement;
 }
+
+export default FormElement;

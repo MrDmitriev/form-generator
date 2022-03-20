@@ -4,7 +4,7 @@ type Props = {
 	element: FormItem
 }
 
-export default function DateField({ element }: Props) {
+const DateField: React.FC<Props> = ({ element }) => {
 	const { label } = element;
 
 	return (
@@ -14,3 +14,5 @@ export default function DateField({ element }: Props) {
 	</div>
 	)
 }
+
+export default DateField;
