@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/form-generator/static/css/main.f9dda1a7.css",
+    "main.js": "/form-generator/static/js/main.90656e51.js",
+    "index.html": "/form-generator/index.html",
+    "main.f9dda1a7.css.map": "/form-generator/static/css/main.f9dda1a7.css.map",
+    "main.90656e51.js.map": "/form-generator/static/js/main.90656e51.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f9dda1a7.css",
+    "static/js/main.90656e51.js"
+  ]
+}
