@@ -2,17 +2,16 @@ import { ChangeEvent } from 'react'
 
 type Props = {
 	onConfigChange: (e: ChangeEvent<HTMLTextAreaElement>) => void,
+	onConfigSubmit: () => void,
 	value: string
 }
-export default function FormConfig({onConfigChange, value}: Props) {
+export default function FormConfig({onConfigChange, onConfigSubmit, value}: Props) {
 	return (
 		<div id="config" className="tabcontent active">
-			<h3>Config</h3>
-			<form action="">
-				<label htmlFor="">
-					<textarea value={value} onChange={onConfigChange} rows={4} placeholder="{items: []}" />	
-				</label>
+			<form className='form-configurator'>
+				<textarea className='form-configurator__input' value={value} onChange={onConfigChange} placeholder="{items: []}" />
 			</form>
+			<button className='form-configurator__submit' onClick={onConfigSubmit}>Apply</button>
 		</div>
 	)
 }
