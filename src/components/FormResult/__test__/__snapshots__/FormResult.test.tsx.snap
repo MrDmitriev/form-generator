@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormResult component should match snapshot 1`] = `
+<div
+  className="tabcontent active"
+  id="result"
+>
+  <div
+    className="form-element"
+  >
+    <label
+      className="form-element__label"
+      htmlFor="numberfield"
+    >
+      Count
+    </label>
+    <input
+      className="form-element__input"
+      id="numberfield"
+      type="number"
+    />
+  </div>
+  <div
+    className="form-element"
+  >
+    <label
+      className="form-element__label"
+      htmlFor="textfield"
+    >
+      Caption
+    </label>
+    <input
+      className="form-element__input"
+      id="textfield"
+      type="text"
+    />
+  </div>
+  <div
+    className="form-element"
+  >
+    <label
+      className="form-element__label"
+      htmlFor="textarea"
+    >
+      Long text
+    </label>
+    <textarea
+      className="form-element__input"
+      id="textarea"
+      rows={5}
+    />
+  </div>
+  <div
+    className="form-element"
+  >
+    <label
+      className="form-element__label"
+      htmlFor="checkbox"
+    >
+      Is Editable
+    </label>
+    <input
+      id="checkbox"
+      type="checkbox"
+    />
+  </div>
+  <div
+    className="form-element"
+  >
+    <label
+      className="form-element__label"
+      htmlFor="datefield"
+    >
+      Date
+    </label>
+    <input
+      className="form-element__input"
+      id="datefield"
+      type="date"
+    />
+  </div>
+  <div
+    className="form-element"
+  >
+    <label
+      className="form-element__label"
+      htmlFor="radiobutton"
+    >
+      Radio
+    </label>
+    <input
+      id="radiobutton"
+      type="radio"
+    />
+  </div>
+  <div
+    className="form-result__buttons"
+  >
+    <button
+      className="form-button"
+    >
+      Ok
+    </button>
+    <button
+      className="form-button"
+    >
+      Cancel
+    </button>
+  </div>
+</div>
+`;

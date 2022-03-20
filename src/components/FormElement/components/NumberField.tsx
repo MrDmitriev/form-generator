@@ -1,4 +1,4 @@
-import { FormItem } from "../../types/FormItem"
+import { FormItem } from "../../../types/FormItem"
 
 type Props = {
 	element: FormItem

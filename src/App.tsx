@@ -1,4 +1,4 @@
-import FormGenerator from './components/FormGenerator';
+import FormGenerator from './components/FormGenerator/FormGenerator';
 
 function App() {
   return (

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormConfig component should match snapshot 1`] = `
+<div
+  className="tabcontent active"
+  id="config"
+>
+  <form
+    className="form-configurator"
+  >
+    <textarea
+      className="form-configurator__input"
+      onChange={[MockFunction]}
+      placeholder="{'items': [], 'buttons': []}"
+      value=""
+    />
+  </form>
+  <button
+    className="form-configurator__submit"
+    onClick={[MockFunction]}
+  >
+     Apply
+  </button>
+</div>
+`;

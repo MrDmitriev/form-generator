@@ -1,37 +1,8 @@
-import { FormItem } from '../types/FormItem'
-import { Checkbox, DateField, NumberField, RadioButton, TextArea, TextField } from './formElements'
+import { FormItem } from '../../types/FormItem'
+import { Checkbox, DateField, NumberField, RadioButton, TextArea, TextField } from './components'
 
 type Props = {
 	element: FormItem
-}
-
-const test = { "items": [
-		{
-			"type": "number",
-			"label": "Count"
-		},
-		{
-			"type": "text",
-			"label": "Caption"
-		},
-		{
-			"type": "textarea",
-			"label": "Long text"
-		},
-		{
-			"type": "checkbox",
-			"label": "Is Editable"
-		},
-		{
-			"type": "date",
-			"label": "Date"
-		},
-		{
-			"type": "radio",
-			"label": "Radio"
-		}
-	],
-	"buttons": ["Ok", "Cancel"]
 }
 
 export default function FormElement({ element }: Props) {

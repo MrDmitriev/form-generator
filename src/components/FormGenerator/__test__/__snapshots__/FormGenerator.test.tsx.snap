@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormGenerator component should match snapshot 1`] = `
+<div
+  className="form-generator"
+>
+  <div
+    className="tab"
+  >
+    <button
+      className="tablinks active"
+      id="config"
+      onClick={[Function]}
+    >
+      config
+    </button>
+    <button
+      className="tablinks false"
+      id="result"
+      onClick={[Function]}
+    >
+      result
+    </button>
+  </div>
+  <div
+    className="tabcontent active"
+    id="config"
+  >
+    <form
+      className="form-configurator"
+    >
+      <textarea
+        className="form-configurator__input"
+        onChange={[Function]}
+        placeholder="{'items': [], 'buttons': []}"
+        value=""
+      />
+    </form>
+    <button
+      className="form-configurator__submit"
+      onClick={[Function]}
+    >
+       Apply
+    </button>
+  </div>
+</div>
+`;
