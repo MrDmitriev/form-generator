@@ -4,6 +4,11 @@ import FormConfig from "../FormConfig/FormConfig";
 import FormResult from "../FormResult/FormResult";
 import Tab from "./components/Tab";
 
+/*
+	Main component, which resolves all functionality related to generating forms.
+	This component renders main skeleton: two tabs (config tab: where you can input form configuration
+	and result tab: where you can see a generated form) and tab content. 
+*/
 export default function FormGenerator() {
 	const [activeTab, setActiveTab] = useState(FORM_CONFIG_TAB);
 	const [formConfig, setFormConfig] = useState('');
@@ -16,14 +21,20 @@ export default function FormGenerator() {
 		[]
 	)
 
-	const handleConfigChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-		const value = e.currentTarget.value;
-		setFormConfig(value);
-	}
+	const handleConfigChange = useCallback(
+		(e: ChangeEvent<HTMLTextAreaElement>) => {
+			const value = e.currentTarget.value;
+			setFormConfig(value);
+		},
+		[]
+	)
 
-	const handleConfigSubmit = () => {
-		setActiveTab(FORM_RESULT_TAB);
-	}
+	const handleConfigSubmit = useCallback(
+		() => {
+			setActiveTab(FORM_RESULT_TAB);
+		},
+		[]
+	)
 
 	return (
 		<div className='form-generator'>
